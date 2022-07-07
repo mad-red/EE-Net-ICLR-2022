@@ -31,7 +31,7 @@ class EE_Net:
         
         if t < 500:
             # linear decision maker
-            suml = self.exploit_scores + self.exploit_scores
+            suml = self.exploit_scores + self.explore_scores
             self.arm_select = np.argmax(suml)
         else:
             # neural decision maker
